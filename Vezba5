@@ -1,0 +1,15 @@
+mu_X <- 0      # Средна вредност за X
+sigma_X <- 1   # Стандардна девијација за X
+mu_Y <- 1      # Средна вредност за Y
+sigma_Y <- 2   # Стандардна девијација за Y
+
+# a) Пресметување на P(X < -1) и P(Y < 1)
+P_X_less_than_minus_1 <- pnorm(-1, mean = mu_X, sd = sigma_X)
+P_Y_less_than_1 <- pnorm(1, mean = mu_Y, sd = sigma_Y)
+
+cat("P(X < -1):", P_X_less_than_minus_1, "\n")
+cat("P(Y < 1):", P_Y_less_than_1, "\n")
+
+# b) Пресметување на z за кој P(X < z) = 0.96
+z_value <- qnorm(0.96, mean = mu_X, sd = sigma_X)
+cat("Вредноста на z за која P(X < z) = 0.96 е:", z_value, "\n")
